@@ -1,7 +1,12 @@
 .slot-game-container {
     width: 400px;
     height: 400px;
-    /* background-color: #fff; */
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .slot-game-header{
@@ -23,19 +28,25 @@
 }
 .slot-game-content-left {
     width: 30px;
-    /* background-color: #fff; */
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .slot-game-content-right {
     width: 30px;
-    /* background-color: #fff; */
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .slot-game-content-bscreen{
@@ -62,7 +73,6 @@
     right: 0;
     bottom: 0;
     border-radius: 20px;
-    /* flex aranage */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,12 +105,13 @@
 .slot-game-header-top {
     height: 30px;
     width: auto;
-    position: absolute;
+    position: absolute; 
     left: 30px;
     right: 30px;
     top: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 
 
 }
@@ -111,6 +122,10 @@
     left: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
@@ -120,5 +135,9 @@
     right: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
 }

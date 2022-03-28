@@ -1,9 +1,13 @@
 const SlotGameBulb = (rootElement, count) => {
-    //mounting the DOM component
+    // mounting the DOM component
+    // mounting game whell-style component
+  
     for(let i=0; i<count; i++){
-    createElement('div', {class: 'slot-game-bulb'}, rootElement);
-    }
-   
+        createElement('div', {class: 'slot-game-bulb'}, rootElement);
+        }
+
+    createElement('link', {rel:'stylesheet', href:'src/components/SlotGameBulb.css'}, document.head);
+     
     //setting animation timer
     let divBulbs = document.querySelectorAll('.slot-game-bulb');
         divBulbs.forEach(div => {

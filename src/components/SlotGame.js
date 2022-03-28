@@ -11,9 +11,7 @@ const SlotGame = (rootElement) => {
     const components = [
         'src/components/SlotGame.css',
         'src/components/SlotGameBulb.js',
-        'src/components/SlotGameBulb.css',
         'src/components/SlotGameWheel.js'
-
     ];
 
     setTimeout(()=> {
@@ -56,13 +54,13 @@ const SlotGame = (rootElement) => {
     // Add elements
     setTimeout(()=> {
     //Content left and right bulbs
-    SlotGameBulb(document.querySelector('.slot-game-content-left'), 12)
-    SlotGameBulb(document.querySelector('.slot-game-content-right'), 12)
+    SlotGameBulb(document.querySelector('.slot-game-content-left'), 9)
+    SlotGameBulb(document.querySelector('.slot-game-content-right'), 9)
     //Header left and right bulbs    
-    SlotGameBulb(document.querySelector('.slot-game-header-left'), 4)
-    SlotGameBulb(document.querySelector('.slot-game-header-right'), 4)
+    SlotGameBulb(document.querySelector('.slot-game-header-left'), 3)
+    SlotGameBulb(document.querySelector('.slot-game-header-right'), 3)
     //Header top bulbs
-    SlotGameBulb(document.querySelector('.slot-game-header-top'), 9)
+    SlotGameBulb(document.querySelector('.slot-game-header-top'), 7)
     //Wheel element add 
     SlotGameWhell(document.querySelectorAll('.slot-game-screen-frame'))
     },500)
