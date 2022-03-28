@@ -1,0 +1,14 @@
+.slot-game-bulb {
+    width: 15px;
+    height: 15px;
+    background-image: radial-gradient(#FFFFB8, #f9ca9a);
+    border-radius: 100%;
+    box-shadow: 2px 2px 3px 1px black;
+    transition: 1s;
+    filter: brightness(65%);
+    margin: 5px 5px 10px;
+}
+
+.slot-game-bulb.lighted {
+    filter: brightness(130%);
+}

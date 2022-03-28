@@ -1,5 +1,124 @@
 .slot-game-container {
-    width: 350px;
-    height: 450px;
-    background-color: brown;
+    width: 400px;
+    height: 400px;
+    /* background-color: #fff; */
+}
+
+.slot-game-header{
+    width: 300px;
+    height: 100px;
+    background-color: #AA0714;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+
+}
+
+.slot-game-content{
+    width: 400px;
+    height: 300px;
+    background-color: #AA0714;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+}
+.slot-game-content-left {
+    width: 30px;
+    /* background-color: #fff; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.slot-game-content-right {
+    width: 30px;
+    /* background-color: #fff; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.slot-game-content-bscreen{
+    position: absolute;
+    width: 320px;
+    height: 250px;
+    background-image: linear-gradient(#3D413B,#0C0B0E,#23201E);
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.slot-game-content-gscreen{
+    position: absolute;
+    width: 280px;
+    height: 220px;
+    background-image: linear-gradient(#F9E6A4,#EABB6B,#B27231);
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    /* flex aranage */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.slot-game-screen-frame {
+    display: flex;
+    width: 85px;
+    height: 180px;
+    background-image: linear-gradient(#7E2D07,#BA7B39,#D59848);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header elements */
+.slot-game-header-screen{
+    position: absolute;
+    width: 220px;
+    height: 70px;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 7px;
+    background-color: #530008;
+
+}
+.slot-game-header-top {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.slot-game-header-left {
+    width: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.slot-game-header-right {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
 }

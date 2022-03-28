@@ -1,32 +1,69 @@
 //Main component modle
 
-const SlotGame = (rootElement) => {
 
-    //mounting game component
-    //rootElement.innerHTML = `<div class="slot-game-container"></div>`
+const SlotGame = (rootElement) => {    
+    //mounting DOMUtils
+    let scriptElement = document.createElement('script')
+        scriptElement.setAttribute('src', 'src/components/libs/DOMUtils.js')
+        document.body.appendChild(scriptElement)
 
-    let divElement = document.createElement('div');
-    divElement.setAttribute('class','slot-game-container');
-    rootElement.appendChild(divElement);
+    //mounting game subcomponent
+    const components = [
+        'src/components/SlotGame.css',
+        'src/components/SlotGameBulb.js',
+        'src/components/SlotGameBulb.css',
+        'src/components/SlotGameWheel.js'
 
-    //mounting game style component
-    //document.head.innerHTML += '<link rel="stylesheet" href="src/components/SlotGame.css">';
-    let linkElement = document.createElement('link');
-    linkElement.setAttribute('rel','stylesheet');
-    linkElement.setAttribute('href','src/components/SlotGame.css');
-    document.head.appendChild(linkElement);
+    ];
 
+    setTimeout(()=> {
+        components.forEach(component => {
+       
+            if(component.slice(component.indexOf('.')+1) === 'css'){
+                createElement('link', {rel: 'stylesheet', href: component}, document.head)
+            }else if(component.slice(component.indexOf('.')+1) === 'js'){
+                createElement('script', {src: component}, document.body)
+    
+            }
+        })
 
+    }, 200);
 
-    //mounting game subcomponents (wheel)
-    let scriptElement = document.createElement('script');
-    scriptElement.src = 'src/components/SlotGameWheel.js';
-    document.body.appendChild(scriptElement);
+    //Create a div elements
+    setTimeout(()=> {
+        let divContainer = createElement('div',{class:'slot-game-container'},rootElement)
+            let divHeader = createElement('div',{class:'slot-game-header'},divContainer)
+            let divContent = createElement('div',{class:'slot-game-content'},divContainer)
+            //create divs bulb element for Header div (divHeader)
+            let divTHeader = createElement('div', {class: 'slot-game-header-top'},divHeader)
+            let divLHeader = createElement('div', {class: 'slot-game-header-left'},divHeader)
+            let divRHeader = createElement('div', {class: 'slot-game-header-right'},divHeader)
+            let divHeaderScreen = createElement('div', {class: 'slot-game-header-screen'},divHeader)
 
-    setTimeout(() => {
-        SlotGameWhell(
-            document.querySelector('.slot-game-container')
-            )
+            //create divs bulb element for Contetn div (divContent)
+            let divLContent = createElement('div', {class: 'slot-game-content-left'},divContent)
+            let divRContent = createElement('div', {class: 'slot-game-content-right'},divContent)
+            //create divs screen
+            let divBlackScreen = createElement('div', {class: 'slot-game-content-bscreen'},divContent)
+            let divGoldScreen = createElement('div', {class: 'slot-game-content-gscreen'},divContent)
+                 let i=3;
+                 while(i--){
+                     let divScreenFrame = createElement('div', {class: 'slot-game-screen-frame'},divGoldScreen)
+                     
+                 }
+    },200)
+
+    // Add elements
+    setTimeout(()=> {
+    //Content left and right bulbs
+    SlotGameBulb(document.querySelector('.slot-game-content-left'), 12)
+    SlotGameBulb(document.querySelector('.slot-game-content-right'), 12)
+    //Header left and right bulbs    
+    SlotGameBulb(document.querySelector('.slot-game-header-left'), 4)
+    SlotGameBulb(document.querySelector('.slot-game-header-right'), 4)
+    //Header top bulbs
+    SlotGameBulb(document.querySelector('.slot-game-header-top'), 9)
+    //Wheel element add 
+    SlotGameWhell(document.querySelectorAll('.slot-game-screen-frame'))
     },500)
-
 }
