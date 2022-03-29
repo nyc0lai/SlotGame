@@ -17,9 +17,9 @@ const SlotGame = (rootElement) => {
     setTimeout(()=> {
         components.forEach(component => {
        
-            if(component.slice(component.indexOf('.')+1) === 'css'){
+            if(component.endsWith('.css')){
                 createElement('link', {rel: 'stylesheet', href: component}, document.head)
-            }else if(component.slice(component.indexOf('.')+1) === 'js'){
+            }else if(component.endsWith('.js')){
                 createElement('script', {src: component}, document.body)
     
             }

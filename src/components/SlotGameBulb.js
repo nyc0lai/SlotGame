@@ -1,4 +1,4 @@
-const SlotGameBulb = (rootElement, count) => {
+const SlotGameBulb = (rootElement, count=1) => {
     // mounting the DOM component
     // mounting game whell-style component
   
