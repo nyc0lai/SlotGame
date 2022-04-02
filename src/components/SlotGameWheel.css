@@ -1,6 +1,14 @@
-.slot-game--wheel {
+.slot-game--wheel{
     width: 75px;
     height: 125px;
-    background-image: linear-gradient(#555,#fff,#555);
+    background-image:
+    url('../../images/sprite.png'), 
+    linear-gradient(#333,#fff,#333);
     border-radius: 5px;
+    background-position-y: 0%;  
+    transition: 1.5s;
+}
+
+.slot-game--wheel input {
+    display: none;
 }

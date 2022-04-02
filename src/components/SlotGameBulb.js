@@ -5,7 +5,7 @@ const SlotGameBulb = (rootElement, count=1) => {
     for(let i=0; i<count; i++){
         createElement('div', {class: 'slot-game-bulb'}, rootElement);
         }
-
+    // document.querySelector('[]')
     createElement('link', {rel:'stylesheet', href:'src/components/SlotGameBulb.css'}, document.head);
      
     //setting animation timer
